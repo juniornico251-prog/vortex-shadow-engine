@@ -139,3 +139,30 @@ body {
   0% { transform: scale(1); }
   100% { transform: scale(1.5); }
 }
+body {
+  background-color: #000;
+  overflow: hidden;
+}
+
+.space {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(128, 0, 128, 0.1); /* Optional: subtle nebula background */
+}
+
+.stars1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(1px 1px at 25px 5px, white, rgba(255, 255, 255, 0)),
+    radial-gradient(1.5px 1.5px at 50px 75px, white, rgba(255, 255, 255, 0)),
+    /* ... add more radial gradients for more stars ... */
+    radial-gradient(2.5px 2.5px at 110px 80px, white, rgba(255, 255, 255, 0));
+}
+/* Create .stars2, .stars3 etc. with different background-image values for more depth */
