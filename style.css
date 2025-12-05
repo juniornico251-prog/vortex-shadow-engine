@@ -111,3 +111,31 @@ button:hover {
         opacity: 0;
     }
 }
+body {
+  background-color: #000; /* Dark background for space */
+  overflow: hidden; /* Prevent scrollbars if stars extend beyond viewport */
+}
+
+.galaxy {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: 1px; /* Small base element */
+  width: 1px;
+  background-color: #fff; /* Color of the central "star" or starting point */
+  border-radius: 50%; /* Make it circular */
+  box-shadow: 
+    /* Each line represents a star: x-offset y-offset blur-radius spread-radius color */
+    -24vw -44vh 2px 2px #fff,
+    38vw -4vh 0px 0px #fff,
+    -20vw -48vh 1px 2px #fff,
+    -39vw 38vh 3px 1px #fff,
+    /* ... add more stars as needed ... */
+    12vw 15vh 3px 3px #fff;
+  animation: zoom 10s alternate infinite; /* Optional: add animation */
+}
+
+@keyframes zoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.5); }
+}
