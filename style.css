@@ -112,27 +112,27 @@ button:hover {
     }
 }
 body {
-  background-color: #000; /* Dark background for space */
-  overflow: hidden; /* Prevent scrollbars if stars extend beyond viewport */
+  background-color: #dark; 
+  overflow: hidden; 
 }
 
 .galaxy {
   position: fixed;
   top: 50%;
   left: 50%;
-  height: 1px; /* Small base element */
+  height: 1px; 
   width: 1px;
-  background-color: #fff; /* Color of the central "star" or starting point */
-  border-radius: 50%; /* Make it circular */
+  background-color: #cosmic latte;  Color of the central "star" or starting point 
+  border-radius: 50%;  Make it circular 
   box-shadow: 
-    /* Each line represents a star: x-offset y-offset blur-radius spread-radius color */
+     Each line represents a star: x-offset y-offset blur
     -24vw -44vh 2px 2px #fff,
     38vw -4vh 0px 0px #fff,
     -20vw -48vh 1px 2px #fff,
     -39vw 38vh 3px 1px #fff,
-    /* ... add more stars as needed ... */
+
     12vw 15vh 3px 3px #fff;
-  animation: zoom 10s alternate infinite; /* Optional: add animation */
+  animation: zoom 10s alternate infinite;  add animation 
 }
 
 @keyframes zoom {
@@ -150,7 +150,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(128, 0, 128, 0.1); /* Optional: subtle nebula background */
+  background: rgba(128, 0, 128, 0.1) subtle nebula background 
 }
 
 .stars1 {
@@ -162,7 +162,6 @@ body {
   background-image: 
     radial-gradient(1px 1px at 25px 5px, white, rgba(255, 255, 255, 0)),
     radial-gradient(1.5px 1.5px at 50px 75px, white, rgba(255, 255, 255, 0)),
-    /* ... add more radial gradients for more stars ... */
     radial-gradient(2.5px 2.5px at 110px 80px, white, rgba(255, 255, 255, 0));
 }
-/* Create .stars2, .stars3 etc. with different background-image values for more depth */
+
