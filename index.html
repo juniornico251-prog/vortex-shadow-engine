@@ -6,6 +6,7 @@
   <body>
     <h1>welcome to mission control</h1>
     <p>T-minus 251</p>
+    <p>ready for liftoff</p>
   </body>
 </html>
 <!DOCTYPE html>
@@ -18,30 +19,148 @@
 </head>
 <body>
 
-    <div id="background"></div>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>vortex shadow engine</title>
 
-    <div class="content">
-        <h1>VORTEX SHADOW ENGINE</h1>
-        <p>A futuristic interactive demo where you can monitor real time flight status including speed,altitude and stability.</p>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+    }
 
-        <button onclick="spawnParticles()">Spawn Particles</button>
-        <button onclick="toggleCube()">Toggle Cube</button>                                    
-        <button onclick="bigBang()">BIG BANG</button>
+    #space {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: radial-gradient(circle at center, #000 10%, #02010a 90%);
+      overflow: hidden;
+      z-index: -10;
+    }
 
-    </div>
+    .stars {
+      position: absolute;
+      width: 200vw;
+      height: 200vh;
+      top: -50vh;
+      left: -50vw;
+      background-image:
+        radial-gradient(1px 1px at 10% 20%, white, transparent),
+        radial-gradient(1px 1px at 80% 50%, white, transparent),
+        radial-gradient(1.5px 1.5px at 40% 90%, white, transparent),
+        radial-gradient(2px 2px at 70% 30%, white, transparent),
+        radial-gradient(1px 1px at 30% 70%, white, transparent),
+        radial-gradient(2.5px 2.5px at 60% 10%, white, transparent),
+        radial-gradient(1px 1px at 90% 80%, white, transparent);
+      opacity: 0.6;
+      animation: drift 120s linear infinite;
+    }
 
-    <div id="cube"></div>
+    @keyframes drift {
+      from { transform: rotate(0deg) scale(1); }
+      to   { transform: rotate(360deg) scale(1.2); }
+    }
 
-    <script src="script.js"></script>
-<div id="galaxy"></div>
+    #blackhole {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 180px;
+      height: 180px;
+      margin-left: -90px;
+      margin-top: -90px;
+      border-radius: 50%;
+      background: radial-gradient(circle, black 40%, #1a1a1a 60%, transparent 75%);
+      animation: spinBH 4s linear infinite;
+      z-index: -5;
+      box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.05);
+    }
 
-<style>  
-</style>
+    @keyframes spinBH {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+
+    #disk {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 360px;
+      height: 360px;
+      margin-left: -180px;
+      margin-top: -180px;
+      border-radius: 50%;
+      background: conic-gradient(
+        rgba(255, 200, 120, 0.4),
+        rgba(255, 100, 50, 0.6),
+        rgba(255, 200, 120, 0.4)
+      );
+      filter: blur(20px);
+      animation: swirl 6s linear infinite;
+      z-index: -6;
+    }
+
+    @keyframes swirl {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+
+    .supernova {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: white;
+      border-radius: 50%;
+      opacity: 0;
+      animation: flash 5s infinite;
+    }
+
+    @keyframes flash {
+      0%, 100% { opacity: 0; transform: scale(0.1); }
+      50%      { opacity: 1; transform: scale(2); }
+    }
+
+    #content {
+      position: absolute;
+      top: 15vh;
+      width: 100%;
+      z-index: 10;
+    }
+
+    h1, p {
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  
+  <div id="space">
+    <div class="stars"></div>
+
+    <div id="disk"></div>
+    <div id="blackhole"></div>
+
+    <div class="supernova" style="top: 15%; left: 70%; animation-delay: 1s;"></div>
+    <div class="supernova" style="top: 80%; left: 20%; animation-delay: 3s;"></div>
+    <div class="supernova" style="top: 40%; left: 90%; animation-delay: 4s;"></div>
+    <div class="supernova" style="top: 60%; left: 10%; animation-delay: 2s;"></div>
+  </div>
+
+  
+  <div id="content">
+  
+  </div>
 
 </body>
 </html>
-<div class="galaxy"></div>
-<div class="space">
-  <div class="stars1"></div>
-  <div class="stars2"></div>
-</div>
+
