@@ -213,6 +213,91 @@
         }
     </style>
 </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Vortex Shadow Engine</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: white;
+        background: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee') no-repeat center center/cover;
+        height: 100vh;
+        overflow-x: hidden;
+    }
+
+    /* Dark overlay for clean text */
+    .overlay {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.55);
+        backdrop-filter: blur(3px);
+    }
+
+    /* Center everything */
+    .hero {
+        position: relative;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 3.5rem;
+        font-weight: bold;
+        text-shadow: 0 0 15px #ffffff;
+        margin: 0;
+        letter-spacing: 2px;
+    }
+
+    .subtitle {
+        font-size: 1.3rem;
+        margin-top: 10px;
+        opacity: 0.85;
+    }
+
+    /* Card for galaxy image */
+    .card {
+        margin-top: 40px;
+        width: 70%;
+        max-width: 1000px;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(6px);
+    }
+
+    .card img {
+        width: 100%;
+        display: block;
+    }
+</style>
+</head>
+
+<body>
+<div class="overlay"></div>
+
+<div class="hero">
+    <h1 class="title">Vortex Shadow Engine</h1>
+    <div class="subtitle">Realtime mission control • rockets • satellites</div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1447433819943-74a20887a81e" />
+    </div>
+</div>
+
+</body>
+</html>
 
 <body>
 
