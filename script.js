@@ -81,3 +81,6 @@ document.querySelectorAll('.glow').forEach(el => {
         el.style.boxShadow = "none";
     });
 });
+function activate() {
+    alert("Vortex Engine Activated!");
+}
