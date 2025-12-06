@@ -164,4 +164,18 @@ body {
     radial-gradient(1.5px 1.5px at 50px 75px, white, rgba(255, 255, 255, 0)),
     radial-gradient(2.5px 2.5px at 110px 80px, white, rgba(255, 255, 255, 0));
 }
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease-out;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.glow {
+    transition: box-shadow 0.4s ease;
+}
 
